@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAG Chat Assistant</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="chat-panel" aria-label="RAG chat assistant">
+        <header class="topbar">
+          <div>
+            <h1>Knowledge Assistant</h1>
+            <p>Grounded answers from the indexed document base</p>
+          </div>
+          <button id="newChat" type="button" title="Start new chat">New Chat</button>
+        </header>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <form id="chatForm" class="composer">
+          <input id="messageInput" type="text" autocomplete="off" placeholder="Ask about passwords, billing, roles, exports..." />
+          <button id="sendButton" type="submit">Send</button>
+        </form>
+        <div id="loading" class="loading" hidden>Retrieving context and generating an answer...</div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
